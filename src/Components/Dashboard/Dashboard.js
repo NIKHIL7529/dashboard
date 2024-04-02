@@ -20,9 +20,9 @@ export default function Dashboard() {
 
   return (
     <div className="flex-grow flex flex-col font-serif">
-      <div className=" py-4 pl-6 flex items-center justify-between">
+      <div className=" py-4 pl-2 flex items-center justify-between">
         {isSearchOpen ? (
-          <div className="flex items-center gap-4 w-full">
+          <div className="flex items-center gap-4 w-full pr-2">
             <input
               type="text"
               placeholder="Search my storyboards"

@@ -24,7 +24,7 @@ export default function Header() {
   const seconds = timeLeft % 60;
 
   return (
-    <header className="bg-[#F9DEBF] text-black font-bold py-1 px-6 flex sm:items-center flex-col sm:flex-row">
+    <header className="bg-[#F9DEBF] text-black font-bold py-2 px-4 flex sm:items-center flex-col sm:flex-row">
       <div className="flex sm:items-center gap-0 flex-col items-start sm:gap-4 sm:flex-row">
         <div className="bg-[#F5C67B] text-[#333333] px-3 py-1 rounded-full flex items-center gap-2">
           <i className="fa-solid fa-clock"></i>
