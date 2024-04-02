@@ -18,7 +18,6 @@ export default function NewStory({ isOpen, onClose }) {
   };
 
   const handleCreateStoryboard = () => {
-    // Create storyboard logic here
     console.log("Creating storyboard:", storyboardName, frameSize, aiAssistant);
     onClose();
   };
@@ -28,12 +27,8 @@ export default function NewStory({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div
-        className="bg-gray-800 bg-opacity-75 absolute inset-0"
-        onClick={onClose}
-      ></div>
-      <div className="bg-white rounded-lg w-1/3 relative">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-75 overflow-auto">
+      <div className="bg-white rounded-lg w-full max-w-sm mx-auto relative">
         <div className="p-10">
           <div className="flex items-center justify-between pb-8">
             <h2 className="text-2xl font-bold">New Storyboard</h2>
@@ -80,7 +75,6 @@ export default function NewStory({ isOpen, onClose }) {
                 <i className="fa-solid fa-toggle-off"></i>
               )}
             </button>
-
             <label className="ml-2 text-gray-700">AI Assistant</label>
           </div>
           <button

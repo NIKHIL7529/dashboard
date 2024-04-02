@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Header() {
-  const [timeLeft, setTimeLeft] = useState(400); // 20 seconds for testing
+  const [timeLeft, setTimeLeft] = useState(400);
   const [timerExpired, setTimerExpired] = useState(false);
 
   useEffect(() => {
@@ -14,19 +14,18 @@ export default function Header() {
 
   useEffect(() => {
     if (timeLeft === 0) {
-      // Timer has expired
       setTimerExpired(true);
     }
   }, [timeLeft]);
 
-  if (timerExpired) return null; // Hide the header if timer has expired
+  if (timerExpired) return null;
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
 
   return (
-    <header className="bg-[#F9DEBF] text-black font-bold py-1 px-6 flex justify-between items-center">
-      <div className="flex items-center gap-4">
+    <header className="bg-[#F9DEBF] text-black font-bold py-1 px-6 flex sm:items-center flex-col sm:flex-row">
+      <div className="flex sm:items-center gap-0 flex-col items-start sm:gap-4 sm:flex-row">
         <div className="bg-[#F5C67B] text-[#333333] px-3 py-1 rounded-full flex items-center gap-2">
           <i className="fa-solid fa-clock"></i>
           <p className="text-sm">One-Time Offer</p>
